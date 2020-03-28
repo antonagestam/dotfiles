@@ -1,0 +1,8 @@
+.idea/
+.python-version
+*.swp
+.mypy_cache/
+.coverage
+.DS_Store
+*.egg-info/
+__pycache__

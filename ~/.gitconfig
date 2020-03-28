@@ -1,0 +1,20 @@
+[user]
+name = Anton Agestam
+email = git@antonagestam.se
+[pull]
+ff = only
+[core]
+excludesfile = ~/.git_global_exclude
+[color]
+ui = true
+[diff]
+wsErrorHighlight = all
+[color "diff"]
+whitespace = red reverse
+[branch "master"]
+mergeoptions = --ff-only
+[rerere]
+enabled = true
+autoupdate = true
+[rebase]
+autostash = true
