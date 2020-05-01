@@ -145,6 +145,8 @@ alias gs='git status'
 alias gl='git log --pretty=oneline -15 --decorate --graph'
 alias gap='git add -p'
 alias gm='git commit -m'
+# Interactively add changes to files changed in HEAD
+alias gap-head='git diff-tree --no-commit-id --name-only -r HEAD | xargs git add -p'
 
 # Bash completion
 maybe_source "$(brew --prefix)/etc/bash_completion.d/git-completion.bash"
