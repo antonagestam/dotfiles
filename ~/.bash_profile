@@ -142,7 +142,7 @@ maybe_source '/usr/local/etc/profile.d/bash_completion.sh'
 
 ###### Git
 alias gs='git status'
-alias gl='git log --pretty=oneline -20 --decorate --graph'
+alias gl='git log --pretty=oneline -11 --decorate --graph'
 alias gap='git add -p'
 alias gm='git commit -m'
 # Interactively add changes to files changed in HEAD
