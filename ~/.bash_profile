@@ -68,21 +68,28 @@
 
 
 ###### Environment
+
 # Prevent Homebrew from fucking with my privacy
 export HOMEBREW_NO_ANALYTICS=1
+
 # Homebrew path
 export PATH=$PATH:/usr/local/bin
+
 # OpenSSL compiler flags
 export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib"
 export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
+
 # Fix vim starting X11
 export DISPLAY=
+
 # GPG bad default
 export GPG_TTY=$(tty)
+
 # Customize prompts
 export PROMPT_DIRTRIM=2
 export PS1='\[\e[2m\]\d \t \w \[\e[m\]\n\[\e[0;91m\]⦿ \[\e[m\] '
 export MYSQL_PS1="\u@\h/\d [\D]\n💾 "
+
 # Fix weird output from sudo
 export LANG="en_US.UTF-8"
 export LC_COLLATE="en_US.UTF-8"
@@ -92,8 +99,12 @@ export LC_MONETARY="en_US.UTF-8"
 export LC_NUMERIC="en_US.UTF-8"
 export LC_TIME="en_US.UTF-8"
 export LC_ALL=
+
 # Make ansible not use cowsay
 export ANSIBLE_NOCOWS=1
+
+# Customize less
+export LESS='-N'
 
 
 ###### Secret local stuffs
