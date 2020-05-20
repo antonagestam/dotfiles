@@ -103,9 +103,6 @@ export LC_ALL=
 # Make ansible not use cowsay
 export ANSIBLE_NOCOWS=1
 
-# Customize less
-export LESS='-N'
-
 
 ###### Secret local stuffs
 source ~/.bash_secret_stuff
@@ -119,6 +116,7 @@ alias resetdns="sudo pkill mDNSResponder"
 alias md5sum='md5 -r'
 # Dokku
 alias dokku='$HOME/.dokku/contrib/dokku_client.sh'
+alias lessn='less -n'
 
 
 ###### Misc helpers
