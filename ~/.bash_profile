@@ -37,6 +37,7 @@
         local required=(
             bash
             bash-completion
+            findutils
             git
             htop
             jq
@@ -122,10 +123,13 @@ alias lessn='less -n'
 ###### Misc helpers
 # Move contents of dir to current dir
 level_up () {
-    local temp_name="_$1_temp"
-    mv "$1" "$temp_name"
-    mv "$temp_name/{,.}*" .
-    rmdir "$temp_name"
+    (
+        set -euo pipefail
+        local temp_name="_$1_temp"
+        mv "$1" "$temp_name"
+        mv "$temp_name/{,.}*" .
+        rmdir "$temp_name"
+    )
 }
 
 # Source file if it exists
@@ -170,6 +174,27 @@ git-close () {
         local source_branch=$2
         local target_branch=${3:-master}
         git push "$origin" --atomic "$source_branch":"$target_branch" :"$source_branch"
+    )
+}
+
+git-readd () {
+    # Interactively add changes in all files touched by the latest commit, or
+    # in any reference passed as a single argument (commit or branch).
+    (
+        set -euox pipefail
+        local ref=${1:-HEAD}
+        gxargs -a <(git diff-tree --no-commit-id --name-only -r "$ref") git add -p --
+    )
+}
+
+git-fix () {
+    # Interactively add changes to files touched in the commit using git-readd,
+    # and then make a fixup commit pointing at the given reference, or HEAD.
+    (
+        set -euox pipefail
+        local ref=${1:-HEAD}
+        git-readd "$ref"
+        git commit --fixup="$ref" --edit
     )
 }
 
