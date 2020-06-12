@@ -181,7 +181,7 @@ git-readd () {
     # Interactively add changes in all files touched by the latest commit, or
     # in any reference passed as a single argument (commit or branch).
     (
-        set -euox pipefail
+        set -euo pipefail
         local ref=${1:-HEAD}
         gxargs -a <(git diff-tree --no-commit-id --name-only -r "$ref") git add -p --
     )
@@ -191,7 +191,7 @@ git-fix () {
     # Interactively add changes to files touched in the commit using git-readd,
     # and then make a fixup commit pointing at the given reference, or HEAD.
     (
-        set -euox pipefail
+        set -euo pipefail
         local ref=${1:-HEAD}
         git-readd "$ref"
         git commit --fixup="$ref" --edit
