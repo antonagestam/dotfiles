@@ -38,6 +38,7 @@
             bash
             bash-completion
             findutils
+            fzf
             git
             htop
             jq
