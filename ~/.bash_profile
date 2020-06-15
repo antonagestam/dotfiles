@@ -155,13 +155,6 @@ maybe_source '/usr/local/etc/profile.d/bash_completion.sh'
 
 
 ###### Git
-alias gs='git status'
-alias gl='git log --pretty=oneline -11 --decorate --graph'
-alias gap='git add -p'
-alias gm='git commit -m'
-# Interactively add changes to files changed in HEAD
-alias gap-head='git diff-tree --no-commit-id --name-only -r HEAD | xargs git add -p'
-
 # Bash completion
 maybe_source "$(brew --prefix)/etc/bash_completion.d/git-completion.bash"
 maybe_source "$(brew --prefix)/etc/bash_completion.d/git-prompt.sh"
@@ -198,6 +191,26 @@ git-fix () {
         git commit --fixup="$ref" --edit
     )
 }
+
+git-flog () {
+    # Interactively pick a commit from the history of the given reference, or
+    # HEAD.
+    (
+        set -euo pipefail
+        local ref=${1:-HEAD}
+        git log --color=always --decorate --oneline "$ref" \
+            | fzf --ansi --reverse \
+            | awk '{ print $1 }'
+    )
+}
+
+# Aliases
+alias gs='git status'
+alias gl='git log --pretty=oneline -11 --decorate --graph'
+alias gap='git add -p'
+alias gm='git commit -m'
+alias grf='git-readd $(git-flog)'
+alias gff='git-fix $(git-flog)'
 
 
 ###### Profile sync
