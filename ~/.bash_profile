@@ -171,13 +171,22 @@ git-close () {
     )
 }
 
+git-touched-files () {
+    # List all files touched by given commit or ref or HEAD if not given.
+    (
+        set -euo pipefail
+        local ref=${1:-HEAD}
+        git diff-tree --no-commit-id --name-only -r "$ref"
+    )
+}
+
 git-readd () {
     # Interactively add changes in all files touched by the latest commit, or
     # in any reference passed as a single argument (commit or branch).
     (
         set -euo pipefail
         local ref=${1:-HEAD}
-        gxargs -a <(git diff-tree --no-commit-id --name-only -r "$ref") git add -p --
+        gxargs -a <(git-touched-files) git add -p --
     )
 }
 
