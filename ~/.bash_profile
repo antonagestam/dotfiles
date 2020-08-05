@@ -37,7 +37,6 @@
         local required=(
             bash
             bash-completion
-            elm
             findutils
             fzf
             git
