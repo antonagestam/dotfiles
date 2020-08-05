@@ -232,6 +232,7 @@ __synced_files=(
     '~/.docker/config.json'
     '~/.ssh/config'
     '~/.ideavimrc'
+    '~/.inputrc'
 )
 __syncdir=~/.syncdir
 

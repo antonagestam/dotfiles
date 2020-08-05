@@ -59,6 +59,7 @@ autocmd FileType make set tabstop=8 shiftwidth=8 softtabstop=0 noexpandtab
 " fix indentation in yaml and ruby files
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType ruby setlocal ts=2 sts=2 sw=2 expandtab
+autocmd FileType json setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType elm setlocal ts=2 sts=2 sw=2 expandtab
 
 " highlight long lines
