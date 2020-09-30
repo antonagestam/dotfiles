@@ -61,6 +61,8 @@ autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType ruby setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType json setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType elm setlocal ts=2 sts=2 sw=2 expandtab
+autocmd FileType markdown setlocal ts=2 sts=2 sw=2 expandtab
+autocmd FileType txt setlocal ts=2 sts=2 sw=2 expandtab
 
 " highlight long lines
 " highlight OverLength ctermbg=red ctermfg=white guibg=#592929
