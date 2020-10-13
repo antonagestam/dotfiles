@@ -78,8 +78,8 @@ export HOMEBREW_NO_ANALYTICS=1
 export PATH=$PATH:/usr/local/bin
 
 # OpenSSL compiler flags
-export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib"
-export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
+export LDFLAGS="$LDFLAGS -L/usr/local/opt/openssl@1.1/lib"
+export CPPFLAGS="$LDFLAGS -I/usr/local/opt/openssl@1.1/include"
 
 # Fix vim starting X11
 export DISPLAY=
@@ -116,6 +116,7 @@ alias ms="m shell"
 alias ll="ls -laGh"
 alias resetdns="sudo pkill mDNSResponder"
 alias md5sum='md5 -r'
+alias grep='grep --color'
 # Dokku
 alias dokku='$HOME/.dokku/contrib/dokku_client.sh'
 alias lessn='less -n'
