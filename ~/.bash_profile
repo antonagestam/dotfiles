@@ -216,7 +216,7 @@ git-flog () {
 
 # Aliases
 alias gs='git status'
-alias gl='git log --pretty=oneline -25 --decorate --graph --abbrev-commit'
+alias gl='git log --oneline -25 --graph'
 alias gap='git add -p'
 alias gm='git commit -m'
 alias grf='git-readd $(git-flog)'
