@@ -39,6 +39,7 @@
             bash-completion
             findutils
             fzf
+            gh
             git
             htop
             jq
@@ -221,6 +222,7 @@ alias gap='git add -p'
 alias gm='git commit -m'
 alias grf='git-readd $(git-flog)'
 alias gff='git-fix $(git-flog)'
+alias pro='gh pr view -w'
 
 
 ###### Profile sync
