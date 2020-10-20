@@ -222,7 +222,8 @@ alias gap='git add -p'
 alias gm='git commit -m'
 alias grf='git-readd $(git-flog)'
 alias gff='git-fix $(git-flog)'
-alias pro='gh pr view -w'
+alias pro='gh pr view --web'
+alias prc='gh pr create --web'
 
 
 ###### Profile sync
