@@ -4,6 +4,11 @@
 # defaults write com.apple.Dock autohide-delay -float 0
 # killall Dock
 
+# Disable "try safari" notifications ... srsly bapple ...
+# defaults write com.apple.coreservices.uiagent CSUIHasSafariBeenLaunched -bool YES
+# defaults write com.apple.coreservices.uiagent CSUIRecommendSafariNextNotificationDate -date 2050-01-01T00:00:00Z
+# defaults write com.apple.coreservices.uiagent CSUILastOSVersionWhereSafariRecommendationWasMade -float 11.99
+
 # Terminal theme and font
 # Belafonte night: https://github.com/lysyi3m/macos-terminal-themes/blob/master/schemes/Belafonte%20Night.terminal
 # Font: Inconsolata 18pt

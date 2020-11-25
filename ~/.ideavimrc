@@ -2,3 +2,8 @@
 " https://vim.fandom.com/wiki/Shifting_blocks_visually
 vnoremap > >gv
 vnoremap < <gv
+
+" disable beeps
+" https://superuser.com/questions/622898/how-to-turn-off-the-bell-sound-in-intellij
+set visualbell
+set noerrorbells
