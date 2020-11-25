@@ -9,6 +9,10 @@
 # defaults write com.apple.coreservices.uiagent CSUIRecommendSafariNextNotificationDate -date 2050-01-01T00:00:00Z
 # defaults write com.apple.coreservices.uiagent CSUILastOSVersionWhereSafariRecommendationWasMade -float 11.99
 
+# Disable "make safari default browser" notification
+# defaults write com.apple.Safari DefaultBrowserDateOfLastPrompt -date '2050-01-01T00:00:00Z'
+# defaults write com.apple.Safari DefaultBrowserPromptingState -int 2
+
 # Terminal theme and font
 # Belafonte night: https://github.com/lysyi3m/macos-terminal-themes/blob/master/schemes/Belafonte%20Night.terminal
 # Font: Inconsolata 18pt
