@@ -58,7 +58,7 @@ defaults write com.apple.Safari DefaultBrowserPromptingState -int 2
             vim
             wget
         )
-        local installed=( $(brew list -1) )
+        local installed=( $(brew list -1 --formula) )
         local missing=(
             $(
                 comm -13 \
