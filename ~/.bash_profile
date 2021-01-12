@@ -249,7 +249,17 @@ __synced_files=(
 )
 __syncdir=~/.syncdir
 
+profileformat () {
+    (
+        # Sort keys in config to avoid never-ending formatting changes.
+        set -euo pipefail
+        jq -S '.' ~/.docker/config.json > ~/.docker/config.json-formatted
+        mv ~/.docker/config.json-formatted ~/.docker/config.json
+    )
+}
+
 profileaddall () {
+    profileformat
     (
         # Copy and add all watched files
         set -euo pipefail
