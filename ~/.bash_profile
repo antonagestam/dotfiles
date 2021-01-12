@@ -227,7 +227,8 @@ git-flog () {
 # Aliases
 alias gs='git status'
 alias gl='git log --oneline -25 --graph'
-alias gap='git add -p'
+alias gap='git add --patch'
+alias gcp='git checkout --patch'
 alias gm='git commit -m'
 alias grf='git-readd $(git-flog)'
 alias gff='git-fix $(git-flog)'
