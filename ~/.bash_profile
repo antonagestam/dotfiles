@@ -57,6 +57,8 @@ defaults write com.apple.Safari DefaultBrowserPromptingState -int 2
             tree
             vim
             wget
+            pre-commit
+            terminal-notifier
         )
         local installed=( $(brew list -1 --formula) )
         local missing=(
@@ -328,7 +330,7 @@ mkvirtualenv () {
     (
         set -euo pipefail
         local name="${PWD##*/}"
-        pyenv virtualenv "${1:-3.9.0}" "$name"
+        pyenv virtualenv "${1:-3.9.1}" "$name"
         echo "$name" > .python-version
         cd .
         python3 -m pip install --upgrade pip setuptools wheel pip-tools
