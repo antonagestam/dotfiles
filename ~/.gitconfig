@@ -20,12 +20,19 @@ whitespace = red reverse
 [branch "master"]
 mergeoptions = --ff-only
 
+[branch "dev"]
+mergeoptions = --ff-only
+
+[branch "main"]
+mergeoptions = --ff-only
+
 [rerere]
 enabled = true
 autoupdate = true
 
 [rebase]
 autostash = true
+autosquash = true
 
 [alias]
 squash = rebase --autosquash --autostash -i
