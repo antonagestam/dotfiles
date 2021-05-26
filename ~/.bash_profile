@@ -323,15 +323,18 @@ spotify () {
 
 
 ###### pyenv
+# Related: https://twitter.com/agestam/status/1397308917504430086
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 mkvirtualenv () {
     (
         set -euo pipefail
         local name="${PWD##*/}"
-        pyenv virtualenv "${1:-3.9.4}" "$name"
+        pyenv virtualenv "${1:-3.9.5}" "$name"
         echo "$name" > .python-version
         cd .
         python3 -m pip install --upgrade pip setuptools wheel pip-tools
