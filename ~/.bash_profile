@@ -1,4 +1,20 @@
 ###### Meta
+# Enable (O)DOH via local proxy
+# https://gist.github.com/soderlind/6a440cd3c8e017444097cf2c89cc301d
+# 1.
+# $ brew install cloudflare/cloudflare/cloudflared
+# 2.
+# $ mkdir -p /usr/local/etc/cloudflared
+# $ cat <<EOF >> /usr/local/etc/cloudflared/config.yaml
+# proxy-dns: true
+# proxy-dns-upstream:
+#   - https://1.1.1.1/dns-query
+#   - https://1.0.0.1/dns-query
+# EOF
+# 3.
+# $ sudo cloudflared service install
+# 5. Change DNS settings to use 127.0.0.1
+
 # Disable dock auto hide/appear animation
 defaults write com.apple.dock autohide-time-modifier -int 0
 defaults write com.apple.Dock autohide-delay -float 0
