@@ -264,6 +264,7 @@ __synced_files=(
     '~/.ssh/config'
     '~/.ideavimrc'
     '~/.inputrc'
+    '~/.pyenv/version'
 )
 __syncdir=~/.syncdir
 
