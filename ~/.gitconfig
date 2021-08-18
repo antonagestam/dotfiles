@@ -8,6 +8,9 @@ ff = only
 [core]
 excludesfile = ~/.git_global_exclude
 
+[init]
+defaultBranch = main
+
 [color]
 ui = true
 
