@@ -39,3 +39,6 @@ autosquash = true
 
 [alias]
 squash = rebase --autosquash --autostash -i
+
+[advice]
+addIgnoredFile = false
