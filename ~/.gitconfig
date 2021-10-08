@@ -42,3 +42,6 @@ squash = rebase --autosquash --autostash -i
 
 [advice]
 addIgnoredFile = false
+
+[commit]
+cleanup = scissors
