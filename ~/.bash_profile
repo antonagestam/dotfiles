@@ -56,7 +56,7 @@ defaults write com.apple.Safari DefaultBrowserPromptingState -int 2
         fi
     }
 
-    check_bash_version
+    # check_bash_version
 
     check_required_homebrew_packages () {
         local required=(
@@ -93,7 +93,7 @@ defaults write com.apple.Safari DefaultBrowserPromptingState -int 2
         fi
     }
 
-    check_required_homebrew_packages
+    # check_required_homebrew_packages
 )
 
 
@@ -116,8 +116,15 @@ export DISPLAY=
 export GPG_TTY=$(tty)
 
 # Customize prompts
+__pyenv_version () {
+    pyenv version | cut -f1 -d' '
+}
+__python_version () {
+    python --version 2>&1 | cut -f2 -d' '
+}
 export PROMPT_DIRTRIM=2
-export PS1='\[\e[2m\]\d \t \w \[\e[m\]\n\[\e[0;91m\]⦿ \[\e[m\] '
+export VIRTUAL_ENV_DISABLE_PROMPT=1
+export PS1='\[\e[2m\]\d \t\n($(__pyenv_version)@$(__python_version)) \w \[\e[m\]\n\[\e[0;91m\]⦿ \[\e[m\] '
 export MYSQL_PS1="\u@\h/\d [\D]\n💾 "
 
 # Fix weird output from sudo
