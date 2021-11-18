@@ -61,7 +61,7 @@ defaults write com.apple.Safari DefaultBrowserPromptingState -int 2
     check_required_homebrew_packages () {
         local required=(
             bash
-            bash-completion
+            'bash-completion@2'
             findutils
             fzf
             gh
