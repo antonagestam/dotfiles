@@ -29,6 +29,10 @@ defaults write com.apple.coreservices.uiagent CSUILastOSVersionWhereSafariRecomm
 defaults write com.apple.Safari DefaultBrowserDateOfLastPrompt -date '2050-01-01T00:00:00Z'
 defaults write com.apple.Safari DefaultBrowserPromptingState -int 2
 
+# Why is this is so hidden!? Bapples ...
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES
+# killall Finder
+
 # Terminal theme and font
 # Belafonte night: https://github.com/lysyi3m/macos-terminal-themes/blob/master/schemes/Belafonte%20Night.terminal
 # Font: Inconsolata 18pt
