@@ -191,7 +191,7 @@ cp_to_usb () {
 
 ###### Bash completion
 # Install with `brew install bash-completion`
-maybe_source '/usr/local/etc/profile.d/bash_completion.sh'
+maybe_source "$(brew --prefix)/etc/profile.d/bash_completion.sh"
 
 
 ###### Git

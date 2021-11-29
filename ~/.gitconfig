@@ -45,3 +45,6 @@ addIgnoredFile = false
 
 [commit]
 cleanup = scissors
+
+[help]
+autoCorrect = prompt
