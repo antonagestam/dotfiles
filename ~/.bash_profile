@@ -33,6 +33,10 @@ defaults write com.apple.Safari DefaultBrowserPromptingState -int 2
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES
 # killall Finder
 
+# Disable Apple Music starting when pressing play on keyboard
+# ... but apparently disables it from working at all :(
+# launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist
+
 # Terminal theme and font
 # Belafonte night: https://github.com/lysyi3m/macos-terminal-themes/blob/master/schemes/Belafonte%20Night.terminal
 # Font: Inconsolata 18pt
@@ -362,7 +366,7 @@ mkvirtualenv () {
     (
         set -euo pipefail
         local name="${PWD##*/}"
-        pyenv virtualenv "${1:-3.10.0}" "$name"
+        pyenv virtualenv "${1:-3.10.1}" "$name"
         echo "$name" > .python-version
         cd .
         python3 -m pip install --upgrade pip setuptools wheel pip-tools
