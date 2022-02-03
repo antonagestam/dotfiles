@@ -372,4 +372,11 @@ mkvirtualenv () {
         python3 -m pip install --upgrade pip setuptools wheel pip-tools pdbpp
     )
 }
-. "$HOME/.cargo/env"
+
+
+###### Rust/cargo
+maybe_source "$HOME/.cargo/env"
+
+
+###### direnv
+eval "$(direnv hook bash)"
