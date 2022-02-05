@@ -369,7 +369,7 @@ mkvirtualenv () {
         pyenv virtualenv "${1:-3.10.1}" "$name"
         echo "$name" > .python-version
         cd .
-        python3 -m pip install --upgrade pip setuptools wheel pip-tools pdbpp
+        python3 -m pip install --upgrade pip setuptools wheel pip-tools pdbpp pre-commit
     )
 }
 
