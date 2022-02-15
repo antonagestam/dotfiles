@@ -12,8 +12,8 @@ pager = delta
 [init]
 defaultBranch = main
 
-[merge]
-conflictstyle = diff3
+# [merge]
+# conflictstyle = diff3
 
 [color]
 ui = true
