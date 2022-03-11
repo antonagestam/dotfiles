@@ -7,13 +7,13 @@ ff = only
 
 [core]
 excludesfile = ~/.git_global_exclude
-pager = delta
+# pager = delta
 
 [init]
 defaultBranch = main
 
-# [merge]
-# conflictstyle = diff3
+[merge]
+conflictstyle = diff3
 
 [color]
 ui = true
@@ -54,8 +54,8 @@ cleanup = scissors
 [help]
 autoCorrect = prompt
 
-[interactive]
-diffFilter = delta --color-only
+# [interactive]
+# diffFilter = delta --color-only
 
-[delta]
-navigate = true  # use n and N to move between diff sections
+# [delta]
+# navigate = true  # use n and N to move between diff sections

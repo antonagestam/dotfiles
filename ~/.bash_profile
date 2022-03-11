@@ -83,6 +83,7 @@ defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES
             wget
             pre-commit
             terminal-notifier
+            curl
         )
         local installed=( $(brew list -1 --formula) )
         local missing=(
@@ -112,6 +113,9 @@ export HOMEBREW_NO_ANALYTICS=1
 
 # Homebrew path
 export PATH=$PATH:/usr/local/bin
+
+# Prefer Homebrew curl
+export PATH="/usr/local/opt/curl/bin:$PATH"
 
 # OpenSSL compiler flags
 export LDFLAGS="$LDFLAGS -L/usr/local/opt/openssl@1.1/lib"
