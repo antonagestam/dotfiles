@@ -25,6 +25,14 @@ colorMoved = default
 [color "diff"]
 whitespace = red reverse
 
+[branch]
+# Disable automatic tracking for e.g `git checkout -b foo origin/main`.
+# https://git-scm.com/docs/git-config#Documentation/git-config.txt-branchautoSetupMerge
+autosetupmerge = false
+# Make tracking default to rebase instead of merge.
+# https://git-scm.com/docs/git-config#Documentation/git-config.txt-branchautoSetupRebase
+autosetuprebase = always
+
 [branch "master"]
 mergeoptions = --ff-only
 
