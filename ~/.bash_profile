@@ -136,7 +136,7 @@ __python_version () {
 }
 export PROMPT_DIRTRIM=2
 export VIRTUAL_ENV_DISABLE_PROMPT=1
-export PS1='\[\e[2m\]\d \t\n($(__pyenv_version)@$(__python_version)) \w \[\e[m\]\n\[\e[0;91m\]⦿ \[\e[m\] '
+export PS1='\[\e[2m\]\d \t\n($(__pyenv_version)) \w \[\e[m\]\n\[\e[0;91m\]⦿ \[\e[m\] '
 export MYSQL_PS1="\u@\h/\d [\D]\n💾 "
 
 # Fix weird output from sudo
