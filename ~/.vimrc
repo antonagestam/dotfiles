@@ -18,6 +18,7 @@ Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'raimon49/requirements.txt.vim'
 Plugin 'w0rp/ale'
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'sheerun/vim-polyglot'
 
 let g:vim_markdown_folding_disabled = 1
 

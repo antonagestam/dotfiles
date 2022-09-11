@@ -158,15 +158,11 @@ source ~/.bash_secret_stuff
 
 
 ###### Aliases
-alias m="python manage.py"
-alias ms="m shell"
 alias ll="ls -laGh"
 alias resetdns="sudo pkill mDNSResponder"
 alias md5sum='md5 -r'
 alias grep='grep --color'
-# Dokku
-alias dokku='$HOME/.dokku/contrib/dokku_client.sh'
-alias lessn='less -n'
+alias dco='docker compose'
 
 
 ###### Misc helpers
