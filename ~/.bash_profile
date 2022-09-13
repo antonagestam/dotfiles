@@ -152,6 +152,9 @@ export LC_ALL=
 # Make ansible not use cowsay
 export ANSIBLE_NOCOWS=1
 
+# Make docker not suggest using Snyk
+export DOCKER_SCAN_SUGGEST=false
+
 
 ###### Secret local stuffs
 source ~/.bash_secret_stuff
