@@ -1,7 +1,3 @@
-[user]
-name = Anton Agestam
-email = git@antonagestam.se
-
 [pull]
 ff = only
 
