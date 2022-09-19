@@ -16,21 +16,21 @@
 # 5. Change DNS settings to use 127.0.0.1
 
 # Disable dock auto hide/appear animation
-defaults write com.apple.dock autohide-time-modifier -int 0
-defaults write com.apple.Dock autohide-delay -float 0
+# defaults write com.apple.dock autohide-time-modifier -int 0
+# defaults write com.apple.Dock autohide-delay -float 0
 # killall Dock
 
 # Disable "try safari" notifications ... srsly bapple ...
-defaults write com.apple.coreservices.uiagent CSUIHasSafariBeenLaunched -bool YES
-defaults write com.apple.coreservices.uiagent CSUIRecommendSafariNextNotificationDate -date 2050-01-01T00:00:00Z
-defaults write com.apple.coreservices.uiagent CSUILastOSVersionWhereSafariRecommendationWasMade -float 11.99
+# defaults write com.apple.coreservices.uiagent CSUIHasSafariBeenLaunched -bool YES
+# defaults write com.apple.coreservices.uiagent CSUIRecommendSafariNextNotificationDate -date 2050-01-01T00:00:00Z
+# defaults write com.apple.coreservices.uiagent CSUILastOSVersionWhereSafariRecommendationWasMade -float 11.99
 
 # Disable "make safari default browser" notification
-defaults write com.apple.Safari DefaultBrowserDateOfLastPrompt -date '2050-01-01T00:00:00Z'
-defaults write com.apple.Safari DefaultBrowserPromptingState -int 2
+# defaults write com.apple.Safari DefaultBrowserDateOfLastPrompt -date '2050-01-01T00:00:00Z'
+# defaults write com.apple.Safari DefaultBrowserPromptingState -int 2
 
 # Why is this is so hidden!? Bapples ...
-defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES
+# defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES
 # killall Finder
 
 # Disable Apple Music starting when pressing play on keyboard
@@ -84,6 +84,7 @@ defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES
             pre-commit
             terminal-notifier
             curl
+            direnv
         )
         local installed=( $(brew list -1 --formula) )
         local missing=(
@@ -104,6 +105,11 @@ defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES
 
     # check_required_homebrew_packages
 )
+
+
+###### Activate Homebrew
+# TODO: Make this backwards compatible?
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 
 ###### Environment
