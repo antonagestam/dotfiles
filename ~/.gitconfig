@@ -1,3 +1,4 @@
+# Note: Put user.{name,email} in `$HOME/.config/git/config`.
 [pull]
 ff = only
 
