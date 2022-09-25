@@ -85,6 +85,7 @@
             terminal-notifier
             curl
             direnv
+            coreutils
         )
         local installed=( $(brew list -1 --formula) )
         local missing=(
@@ -389,3 +390,7 @@ maybe_source "$HOME/.cargo/env"
 
 ###### direnv
 eval "$(direnv hook bash)"
+
+
+# Added by Toolbox App
+export PATH="$PATH:/Users/anton/Library/Application Support/JetBrains/Toolbox/scripts"
