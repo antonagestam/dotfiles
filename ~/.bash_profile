@@ -68,24 +68,26 @@
 
     check_required_homebrew_packages () {
         local required=(
+            ansible
+            coreutils
+            curl
             bash
             'bash-completion@2'
+            direnv
             findutils
             fzf
             gh
             git
             htop
             jq
+            openssh
+            pre-commit
             pyenv
             pyenv-virtualenv
+            terminal-notifier
             tree
             vim
             wget
-            pre-commit
-            terminal-notifier
-            curl
-            direnv
-            coreutils
         )
         local installed=( $(brew list -1 --formula) )
         local missing=(
@@ -108,9 +110,10 @@
 )
 
 
-###### Activate Homebrew
-# TODO: Make this backwards compatible?
-eval "$(/opt/homebrew/bin/brew shellenv)"
+###### Activate Homebrew, on ARM
+if [[ -x /opt/homebrew/bin/brew ]]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
 
 
 ###### Environment
