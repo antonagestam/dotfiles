@@ -175,7 +175,14 @@ alias ll="ls -laGh"
 alias resetdns="sudo pkill mDNSResponder"
 alias md5sum='md5 -r'
 alias grep='grep --color'
-alias dco='docker compose'
+
+
+###### Start SSH agent and add private key
+(
+    set -euo pipefail
+    eval "$(ssh-agent -s)" > /dev/null
+    ssh-add ~/.ssh/id_ed25519 2> /dev/null
+)
 
 
 ###### Misc helpers
