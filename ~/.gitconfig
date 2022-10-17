@@ -4,6 +4,7 @@ ff = only
 
 [core]
 excludesfile = ~/.git_global_exclude
+editor = vim
 # pager = delta
 
 [init]

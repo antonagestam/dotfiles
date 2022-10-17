@@ -116,6 +116,13 @@ if [[ -x /opt/homebrew/bin/brew ]]; then
 fi
 
 
+###### Load SSH keys
+{
+    eval "$(ssh-agent)"
+    ssh-add -A
+} &>/dev/null
+
+
 ###### Environment
 
 # Prevent Homebrew from fucking with my privacy
