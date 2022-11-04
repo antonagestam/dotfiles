@@ -172,6 +172,9 @@ export ANSIBLE_NOCOWS=1
 # Make docker not suggest using Snyk
 export DOCKER_SCAN_SUGGEST=false
 
+# Please put the gun down, pip.
+PIP_REQUIRE_VIRTUALENV=true
+
 
 ###### Secret local stuffs
 source ~/.bash_secret_stuff
