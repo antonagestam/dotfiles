@@ -173,7 +173,7 @@ export ANSIBLE_NOCOWS=1
 export DOCKER_SCAN_SUGGEST=false
 
 # Please put the gun down, pip.
-PIP_REQUIRE_VIRTUALENV=true
+export PIP_REQUIRE_VIRTUALENV=true
 
 
 ###### Secret local stuffs
