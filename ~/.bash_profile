@@ -188,11 +188,8 @@ alias grep='grep --color'
 
 
 ###### Start SSH agent and add private key
-(
-    set -euo pipefail
-    eval "$(ssh-agent -s)" > /dev/null
-    ssh-add ~/.ssh/id_ed25519 2> /dev/null
-)
+eval "$(ssh-agent -s)" > /dev/null
+ssh-add ~/.ssh/id_ed25519 2> /dev/null
 
 
 ###### Misc helpers
@@ -396,7 +393,7 @@ mkvirtualenv () {
     (
         set -euo pipefail
         local name="${PWD##*/}"
-        pyenv virtualenv "${1:-3.10.6}" "$name"
+        pyenv virtualenv "${1:-3.11.0}" "$name"
         echo "$name" > .python-version
         cd .
         python3 -m pip install --upgrade pip setuptools wheel pip-tools pdbpp pre-commit
