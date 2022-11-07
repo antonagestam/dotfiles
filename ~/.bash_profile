@@ -116,13 +116,6 @@ if [[ -x /opt/homebrew/bin/brew ]]; then
 fi
 
 
-###### Load SSH keys
-{
-    eval "$(ssh-agent)"
-    ssh-add -A
-} &>/dev/null
-
-
 ###### Environment
 
 # Prevent Homebrew from fucking with my privacy
@@ -189,7 +182,10 @@ alias grep='grep --color'
 
 ###### Start SSH agent and add private key
 eval "$(ssh-agent -s)" > /dev/null
-ssh-add ~/.ssh/id_ed25519 2> /dev/null
+identities=$(ssh-add -L | wc -l)
+if (( identities == 0 )); then 
+    ssh-add ~/.ssh/id_ed25519 2> /dev/null
+fi
 
 
 ###### Misc helpers
