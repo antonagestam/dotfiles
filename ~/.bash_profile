@@ -182,8 +182,7 @@ alias grep='grep --color'
 
 ###### Start SSH agent and add private key
 eval "$(ssh-agent -s)" > /dev/null
-identities=$(ssh-add -L | wc -l)
-if (( identities == 0 )); then 
+if ! ssh-add -L > /dev/null; then 
     ssh-add ~/.ssh/id_ed25519 2> /dev/null
 fi
 
