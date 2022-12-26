@@ -183,7 +183,7 @@ alias grep='grep --color'
 ###### Start SSH agent and add private key
 eval "$(ssh-agent -s)" > /dev/null
 if ! ssh-add -L > /dev/null; then 
-    ssh-add ~/.ssh/id_ed25519 2> /dev/null
+    ssh-add --apple-use-keychain ~/.ssh/id_ed25519 2> /dev/null
 fi
 
 
