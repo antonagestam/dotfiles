@@ -281,7 +281,7 @@ git-flog () {
 
 # Aliases
 alias gs='git status'
-alias gl='git log --oneline -18 --graph'
+alias gl='git log --oneline -15 --graph'
 alias gap='git add --patch'
 alias gcp='git checkout --patch'
 alias gm='git commit -m'
@@ -388,7 +388,7 @@ mkvirtualenv () {
     (
         set -euo pipefail
         local name="${PWD##*/}"
-        pyenv virtualenv "${1:-3.11.0}" "$name"
+        pyenv virtualenv "${1:-3.11.2}" "$name"
         echo "$name" > .python-version
         cd .
         python3 -m pip install --upgrade pip setuptools wheel pip-tools pre-commit
