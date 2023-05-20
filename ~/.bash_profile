@@ -178,14 +178,12 @@ alias ll="ls -laGh"
 alias resetdns="sudo pkill mDNSResponder"
 alias md5sum='md5 -r'
 alias grep='grep --color'
-alias sssh='ssh -o ConnectTimeout=1 -o ConnectionAttempts=1'
 
 
 ###### Start SSH agent and add private key
-if ! ssh-add -L > /dev/null 2>&1; then 
+if ! ssh-add -L > /dev/null 2>&1; then
     eval "$(ssh-agent -s)" > /dev/null
     ssh-add --apple-use-keychain ~/.ssh/id_ed25519 2> /dev/null
-    ssh-add ~/.ssh/id_ed25519 2> /dev/null
 fi
 
 
