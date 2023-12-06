@@ -122,7 +122,9 @@ fi
 export HOMEBREW_NO_ANALYTICS=1
 
 # Homebrew path
-export PATH=$PATH:/usr/local/bin
+export PATH="$PATH:/usr/local/bin"
+export PATH="/usr/local/sbin:$PATH"
+
 
 # Prefer Homebrew curl
 export PATH="/usr/local/opt/curl/bin:$PATH"
