@@ -389,7 +389,7 @@ mkvirtualenv () {
     (
         set -euo pipefail
         local name="${PWD##*/}"
-        pyenv virtualenv "${1:-3.12.0}" "$name"
+        pyenv virtualenv "${1:-3.12.1}" "$name"
         echo "$name" > .python-version
         cd .
         python3 -m pip install --upgrade pip setuptools wheel pip-tools pre-commit
