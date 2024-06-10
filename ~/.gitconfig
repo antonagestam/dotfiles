@@ -50,6 +50,7 @@ autosquash = true
 
 [alias]
 squash = rebase --autosquash --autostash -i
+please = push --atomic --force-with-lease
 
 [advice]
 addIgnoredFile = false
