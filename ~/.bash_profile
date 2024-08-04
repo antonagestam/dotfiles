@@ -166,6 +166,7 @@ export ANSIBLE_NOCOWS=1
 
 # Make docker not suggest using Snyk
 export DOCKER_SCAN_SUGGEST=false
+export DOCKER_CLI_HINTS=false
 
 # Please put the gun down, pip.
 export PIP_REQUIRE_VIRTUALENV=true
