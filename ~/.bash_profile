@@ -29,6 +29,9 @@
 # defaults write com.apple.Safari DefaultBrowserDateOfLastPrompt -date '2050-01-01T00:00:00Z'
 # defaults write com.apple.Safari DefaultBrowserPromptingState -int 2
 
+# Press and hold behavior
+# defaults write -g ApplePressAndHoldEnabled 0
+
 # Why is this is so hidden!? Bapples ...
 # defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES
 # killall Finder
