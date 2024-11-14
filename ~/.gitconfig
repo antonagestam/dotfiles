@@ -47,6 +47,8 @@ autoupdate = true
 [rebase]
 autostash = true
 autosquash = true
+# Always keep merge trains in sync.
+updateRefs = true
 
 [alias]
 squash = rebase --autosquash --autostash -i
