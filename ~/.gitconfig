@@ -50,6 +50,9 @@ autosquash = true
 # Always keep merge trains in sync.
 updateRefs = true
 
+[fetch]
+prune = true
+
 [alias]
 squash = rebase --autosquash --autostash -i
 please = push --atomic --force-with-lease
