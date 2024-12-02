@@ -407,7 +407,3 @@ maybe_source "$HOME/.cargo/env"
 
 ###### direnv
 eval "$(direnv hook bash)"
-
-
-# Added by Toolbox App
-export PATH="$PATH:/Users/anton/Library/Application Support/JetBrains/Toolbox/scripts"
