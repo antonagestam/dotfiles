@@ -302,22 +302,12 @@ __synced_files=(
     '~/.vimrc'
     '~/.git_global_exclude'
     '~/.gitconfig'
-    '~/.docker/config.json'
     '~/.ssh/config'
     '~/.ideavimrc'
     '~/.inputrc'
     '~/.pyenv/version'
 )
 __syncdir=~/.syncdir
-
-profileformat () {
-    (
-        # Sort keys in config to avoid never-ending formatting changes.
-        set -euo pipefail
-        jq -S '.' ~/.docker/config.json > ~/.docker/config.json-formatted
-        mv ~/.docker/config.json-formatted ~/.docker/config.json
-    )
-}
 
 profileaddall () {
     profileformat
