@@ -310,7 +310,6 @@ __synced_files=(
 __syncdir=~/.syncdir
 
 profileaddall () {
-    profileformat
     (
         # Copy and add all watched files
         set -euo pipefail
