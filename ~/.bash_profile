@@ -390,6 +390,10 @@ mkvirtualenv () {
 }
 
 
+###### Goose
+alias goose='uvx --from=git-goose goose'
+
+
 ###### Rust/cargo
 maybe_source "$HOME/.cargo/env"
 
