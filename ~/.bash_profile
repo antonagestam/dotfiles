@@ -32,6 +32,9 @@
 # Press and hold behavior
 # defaults write -g ApplePressAndHoldEnabled 0
 
+# No margins for tiled windows
+# defaults write com.apple.WindowManager EnableTiledWindowMargins -bool false
+
 # Why is this is so hidden!? Bapples ...
 # defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES
 # killall Finder
@@ -283,6 +286,15 @@ git-flog () {
             | awk '{ print $1 }'
     )
 }
+
+charm-conflict () {
+    (
+        set -euo pipefail
+        git diff --name-only --diff-filter=U \
+            | xargs ~/Library/Application\ Support/JetBrains/Toolbox/scripts/pycharm
+    )
+}
+
 
 # Aliases
 alias gs='git status'
