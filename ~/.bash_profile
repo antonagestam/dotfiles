@@ -403,7 +403,7 @@ mkvirtualenv () {
 
 
 ###### Goose
-alias goose='uvx --from=git-goose goose'
+alias goose='uvx --from=git-goose@latest goose'
 
 
 ###### Rust/cargo
