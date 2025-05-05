@@ -32,6 +32,9 @@
 # Press and hold behavior
 # defaults write -g ApplePressAndHoldEnabled 0
 
+# Remove touchpad right click delay
+# https://www.reddit.com/r/MacOS/comments/hbl38d/tip_how_to_get_rid_of_rightclick_delay_on_touchpad/?rdt=35226
+
 # No margins for tiled windows
 # defaults write com.apple.WindowManager EnableTiledWindowMargins -bool false
 
