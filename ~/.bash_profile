@@ -316,6 +316,7 @@ __synced_files=(
     '~/.bash_profile'
     '~/.vimrc'
     '~/.git_global_exclude'
+    '~/.config/git/allowed_signers'
     '~/.gitconfig'
     '~/.ssh/config'
     '~/.ideavimrc'
