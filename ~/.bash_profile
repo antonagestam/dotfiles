@@ -405,7 +405,6 @@ mkvirtualenv () {
 }
 
 
-
 ###### Goose
 alias goose='uvx --from=git-goose goose'
 
