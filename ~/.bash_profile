@@ -400,7 +400,7 @@ mkvirtualenv () {
         pyenv virtualenv "${1:-3.13.1}" "$name"
         echo "$name" > .python-version
         cd .
-        python3 -m pip install --upgrade pip setuptools wheel
+        python -m pip install --upgrade uv
     )
 }
 
