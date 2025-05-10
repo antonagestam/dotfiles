@@ -1,4 +1,4 @@
-# Note: Put user.{name,email} in `$HOME/.config/git/config`.
+# Note: Put user.{name,email,signingkey} in `$HOME/.config/git/config`.
 [pull]
 ff = only
 
@@ -62,6 +62,10 @@ addIgnoredFile = false
 
 [commit]
 cleanup = scissors
+gpgsign = true
 
 [help]
 autoCorrect = prompt
+
+[gpg]
+format = ssh
