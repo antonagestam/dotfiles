@@ -10,13 +10,12 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'godlygeek/tabular'
+" Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
-Plugin 'JulesWang/css.vim'
-Plugin 'pangloss/vim-javascript'
+" Plugin 'JulesWang/css.vim'
+" Plugin 'pangloss/vim-javascript'
 Plugin 'ekalinin/Dockerfile.vim'
-Plugin 'raimon49/requirements.txt.vim'
-Plugin 'w0rp/ale'
+Plugin 'dense-analysis/ale'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'sheerun/vim-polyglot'
 
