@@ -16,6 +16,9 @@ conflictstyle = diff3
 [color]
 ui = true
 
+[color "status"]
+branch = magenta
+
 [diff]
 wsErrorHighlight = all
 colorMoved = default
