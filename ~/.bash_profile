@@ -231,6 +231,12 @@ cp_to_usb () {
 maybe_source "$(brew --prefix)/etc/profile.d/bash_completion.sh"
 
 
+###### Bash history
+export HISTCONTROL='ignorespace:ignoredups'
+export HISTFILESIZE=5000
+export HISTSIZE=5000
+
+
 ###### Git
 # Bash completion
 maybe_source "$(brew --prefix)/etc/bash_completion.d/git-completion.bash"

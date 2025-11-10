@@ -109,6 +109,10 @@ set undolevels=1000      " use many muchos levels of undo
 set title                " change the terminal's title
 set nobackup
 
+" prevent double spaces when using e.g. gq
+" https://stackoverflow.com/a/4760477
+set nojoinspaces
+
 " do not lose selection after indenting and deindenting
 " https://vim.fandom.com/wiki/Shifting_blocks_visually
 vnoremap > >gv
