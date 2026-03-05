@@ -420,8 +420,7 @@ alias goose='uvx --from=git-goose goose'
 
 
 ###### Rust/cargo
-maybe_
+maybe_source "$HOME/.cargo/env"
 
 ###### direnv
 eval "$(direnv hook bash)"
-. "$HOME/.cargo/env"
