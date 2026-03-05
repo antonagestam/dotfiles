@@ -407,7 +407,7 @@ mkvirtualenv () {
     (
         set -euo pipefail
         local name="${PWD##*/}"
-        pyenv virtualenv "${1:-3.13.1}" "$name"
+        pyenv virtualenv "${1:-3.14.3}" "$name"
         echo "$name" > .python-version
         cd .
         python -m pip install --upgrade uv
@@ -420,8 +420,8 @@ alias goose='uvx --from=git-goose goose'
 
 
 ###### Rust/cargo
-maybe_source "$HOME/.cargo/env"
-
+maybe_
 
 ###### direnv
 eval "$(direnv hook bash)"
+. "$HOME/.cargo/env"
