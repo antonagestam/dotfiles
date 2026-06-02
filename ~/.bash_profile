@@ -407,7 +407,7 @@ mkvirtualenv () {
     (
         set -euo pipefail
         local name="${PWD##*/}"
-        pyenv virtualenv "${1:-3.14.3}" "$name"
+        pyenv virtualenv "${1:-3.14.5}" "$name"
         echo "$name" > .python-version
         cd .
         python -m pip install --upgrade uv
