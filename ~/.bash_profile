@@ -201,6 +201,9 @@ alias kcat='docker run --net=host -it --rm edenhill/kcat:1.7.0'
 ###### Start SSH agent and add private key
 eval "$(ssh-agent -s)" > /dev/null
 ssh-add --apple-use-keychain ~/.ssh/id_ed25519 2> /dev/null
+if [[ -r ~/.ssh/id_ed25519_personal ]]; then
+    ssh-add --apple-use-keychain ~/.ssh/id_ed25519_personal 2> /dev/null
+fi
 
 
 ###### Misc helpers
