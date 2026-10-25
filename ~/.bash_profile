@@ -153,10 +153,12 @@ export GPG_TTY=$(tty)
 
 # Customize prompts
 __pyenv_version () {
-    pyenv version | cut -f1 -d' '
-}
-__python_version () {
-    python --version 2>&1 | cut -f2 -d' '
+    if [[ "${VIRTUAL_ENV-}" == */.venv ]]; then
+        local project="${VIRTUAL_ENV%/.venv}"
+        echo "${project##*/}"
+    else
+        pyenv version | cut -f1 -d' '
+    fi
 }
 export PROMPT_DIRTRIM=2
 export VIRTUAL_ENV_DISABLE_PROMPT=1
@@ -331,6 +333,7 @@ __synced_files=(
     '~/.ideavimrc'
     '~/.inputrc'
     '~/.pyenv/version'
+    '~/.config/direnv/direnvrc'
 )
 __syncdir=~/.syncdir
 
@@ -403,7 +406,7 @@ eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
-mkvirtualenv () {
+mkvirtualenv_pyenv () {
     (
         set -euo pipefail
         local name="${PWD##*/}"
@@ -411,6 +414,15 @@ mkvirtualenv () {
         echo "$name" > .python-version
         cd .
         python -m pip install --upgrade uv
+    )
+}
+
+mkvirtualenv () {
+    (
+        set -euo pipefail
+        set -o noclobber
+        echo "layout uv ${1:-3.15}" > .envrc
+        direnv allow .
     )
 }
 

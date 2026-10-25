@@ -9,3 +9,4 @@ __pycache__
 .dmypy.json
 .slask
 .envrc
+.venv

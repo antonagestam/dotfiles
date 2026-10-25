@@ -1,0 +1,10 @@
+layout_uv() {
+    local python="${1:?}"
+    local venv="$PWD/.venv"
+    if [[ ! -d "$venv" ]]; then
+        log_status "creating $venv"
+        uv venv --quiet --python "$python" "$venv"
+    fi
+    export VIRTUAL_ENV="$venv"
+    PATH_add "$venv/bin"
+}
